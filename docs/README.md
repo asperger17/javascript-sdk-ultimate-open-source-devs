@@ -337,6 +337,7 @@ depending on the set serializer</p>
         * [new this.Customer()](#new_Elarian+Customer_new)
     * [.generateAuthToken()](#Elarian+generateAuthToken) ⇒ <code>AuthToken</code>
     * [.initializeCustomer(params)](#Elarian+initializeCustomer) ⇒
+    * [.deleteCustomer(customerParams)](#Elarian+deleteCustomer) ⇒
     * [.sendMessageByTag(tag, channelNumber, message)](#Elarian+sendMessageByTag) ⇒ <code>TagUpdateReply</code>
     * [.replayMessagingConsentUpdate(customerNumber, channelNumber, consent, updatedAt)](#Elarian+replayMessagingConsentUpdate)
     * [.replayMessageReactionUpdate(customerNumber, channelNumber, messageId, reaction, updatedAt)](#Elarian+replayMessageReactionUpdate)
@@ -350,6 +351,7 @@ depending on the set serializer</p>
     * [.addCustomerReminderByTag(tag, reminder)](#Elarian+addCustomerReminderByTag) ⇒ <code>TagUpdateReply</code>
     * [.cancelCustomerReminderByTag(tag, key)](#Elarian+cancelCustomerReminderByTag) ⇒ <code>TagUpdateReply</code>
     * [._createCustomer(customerNumber)](#Elarian+_createCustomer) ⇒ <code>CustomerStateUpdateReply</code>
+    * [._deleteCustomer(customer)](#Elarian+_deleteCustomer) ⇒ <code>DeleteCustomerReply</code>
     * [.connect()](#Client+connect) ⇒ [<code>Elarian</code>](#Elarian)
     * [.isConnected()](#Client+isConnected) ⇒ <code>boolean</code>
     * [.disconnect()](#Client+disconnect)
@@ -392,6 +394,18 @@ depending on the set serializer</p>
 | Param | Type |
 | --- | --- |
 | params | <code>CustomerParams</code> | 
+
+<a name="Elarian+deleteCustomer"></a>
+
+### elarian.deleteCustomer(customerParams) ⇒
+<p>Delete a customer</p>
+
+**Kind**: instance method of [<code>Elarian</code>](#Elarian)  
+**Returns**: <p>DeleteCustomerReply</p>  
+
+| Param | Type |
+| --- | --- |
+| customerParams | <code>CustomerParams</code> | 
 
 <a name="Elarian+sendMessageByTag"></a>
 
@@ -566,6 +580,17 @@ depending on the set serializer</p>
 | Param | Type |
 | --- | --- |
 | customerNumber | <code>\*</code> | 
+
+<a name="Elarian+_deleteCustomer"></a>
+
+### elarian.\_deleteCustomer(customer) ⇒ <code>DeleteCustomerReply</code>
+<p>Delete a customer using the Customer Number</p>
+
+**Kind**: instance method of [<code>Elarian</code>](#Elarian)  
+
+| Param | Type |
+| --- | --- |
+| customer | [<code>Customer</code>](#Customer) | 
 
 <a name="Client+connect"></a>
 
